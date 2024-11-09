@@ -11,3 +11,21 @@ variable "database_name"{
 variable "project_id" {
     type = string  
 }
+
+variable "cluster_name" {
+  description = "Nombre del clúster de Kubernetes."
+  type        = string
+  default     = "mi-cluster"
+}
+
+variable "node_count" {
+  description = "Cantidad de nodos en el clúster."
+  type        = number
+  default     = 3
+}
+
+variable "machine_type" {
+  description = "Tipo de máquina para los nodos del clúster."
+  type        = string
+  default     = "e2-medium"
+}
