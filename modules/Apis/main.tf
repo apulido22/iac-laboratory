@@ -31,3 +31,14 @@ resource "google_project_service" "storage" {
   service = "storage.googleapis.com"
   disable_dependent_services = true
 }
+
+# Habilita la API de Kubernetes
+resource "google_project_service" "kubernetes_api" {
+  project = var.project_id
+  service = "container.googleapis.com"
+}
+
+resource "google_project_service" "cloud_resource_manager" {
+  project = var.project_id
+  service = "cloudresourcemanager.googleapis.com" 
+}
