@@ -18,11 +18,11 @@ variable "region" {
 variable "node_count" {
   description = "Cantidad de nodos en el clúster."
   type        = number
-  default     = 3
+  default     = 2
 }
 
 variable "machine_type" {
   description = "Tipo de máquina para los nodos del clúster."
   type        = string
-  default     = "e2-medium"
+  default     = "e2-small"
 }
