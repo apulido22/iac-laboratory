@@ -4,7 +4,7 @@ provider "google" {
 }
 
 module "APIs" {
-  source     = "./modules/apis"
+  source     = "./modules/Apis"
   project_id =  var.project_id
 }
 
