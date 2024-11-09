@@ -5,6 +5,8 @@ resource "google_container_cluster" "primary" {
 
   initial_node_count = var.node_count
 
+  deletion_protection = false
+
   node_config {
     machine_type = var.machine_type
     disk_size_gb = 50
