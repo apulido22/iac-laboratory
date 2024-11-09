@@ -1,0 +1,17 @@
+provider "google" {
+  project = var.project_id
+  region  = var.region
+}
+
+module "APIs" {
+  source     = "./modules/apis"
+  project_id =  var.project_id
+}
+
+module "Kubernetes" {
+    source          = "./modules/Kubernetes"
+    region          = var.region
+    node_count      = var.node_count
+    machine_type    = var.machine_type
+}
+
