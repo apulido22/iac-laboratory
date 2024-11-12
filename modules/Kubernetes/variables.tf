@@ -32,3 +32,8 @@ variable "zone" {
   type        = string
   default     = "us-east1-d"  
   }
+
+variable "registry_url" {
+  description = "URL del Artifact Registry para imágenes Docker."
+  type        = string
+}

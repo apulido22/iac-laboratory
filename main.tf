@@ -15,11 +15,12 @@ module "Kubernetes" {
   zone         = var.zone
   node_count   = var.node_count
   machine_type = var.machine_type
+  registry_url = module.artifact_registry.registry_url
  # depends_on    = [module.APIs]
 }
 
 module "artifact_registry" {
-  source    = "./modules/artifact_registry"
+  source    = "./modules/Registry"
   project_id = var.project_id
   region     = var.region
 }
