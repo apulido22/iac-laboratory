@@ -16,7 +16,7 @@ module "Kubernetes" {
   node_count   = var.node_count
   machine_type = var.machine_type
   registry_url = module.artifact_registry.registry_url
- # depends_on    = [module.APIs]
+  depends_on    = [module.APIs]
 }
 
 module "artifact_registry" {
