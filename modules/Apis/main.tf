@@ -38,7 +38,3 @@ resource "google_project_service" "kubernetes_api" {
   service = "container.googleapis.com"
 }
 
-resource "google_project_service" "cloud_resource_manager" {
-  project = var.project_id
-  service = "cloudresourcemanager.googleapis.com" 
-}

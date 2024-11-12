@@ -29,3 +29,9 @@ variable "machine_type" {
   type        = string
   default     = "e2-small"
 }
+
+variable "zone" {
+  description = "Zona."
+  type        = string
+  default     = "us-east1-d"
+}

@@ -12,7 +12,7 @@ module "Kubernetes" {
   source       = "./modules/Kubernetes"
   project_id   = var.project_id
   cluster_name = var.cluster_name
-  region       = var.region
+  zone       = var.zone
   node_count   = var.node_count
   machine_type = var.machine_type
  # depends_on    = [module.APIs]
