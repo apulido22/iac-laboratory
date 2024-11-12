@@ -4,9 +4,9 @@ provider "google" {
 }
 
 provider "kubernetes" {
-  host                   = google_container_cluster.primary.endpoint
+  host                   = module.Kubernetes.endpoint
   token                  = data.google_client_config.default.access_token
-  cluster_ca_certificate = base64decode(google_container_cluster.primary.master_auth.cluster_ca_certificate)
+  cluster_ca_certificate = base64decode(module.Kubernetes.cluster_ca_certificate)
 }
 
 data "google_client_config" "default" {}
