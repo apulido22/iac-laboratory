@@ -26,3 +26,9 @@ variable "machine_type" {
   type        = string
   default     = "e2-small"
 }
+
+variable "zone" {
+  description = "Zona donde se creará el clúster."
+  type        = string
+  default     = "us-east1-d"  
+  }

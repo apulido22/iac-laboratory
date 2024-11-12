@@ -31,7 +31,7 @@ variable "machine_type" {
 }
 
 variable "zone" {
-  description = "Zona."
+  description = "Zona donde se creará el clúster."
   type        = string
-  default     = "us-east1-d"
-}
+  default     = "us-east1-d"  
+  }
