@@ -1,6 +1,6 @@
-resource "kubernetes_config_map" "backend_config" {
+resource "kubernetes_config_map" "backend-config" {
   metadata {
-    name = "backend_config"
+    name = "backend-config"
   }
 
   data = {

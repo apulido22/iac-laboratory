@@ -17,7 +17,7 @@ resource "kubernetes_pod" "gateway" {
 
       env_from {
         config_map_ref {
-          name = kubernetes_config_map.backend_config.metadata[0].name
+          name = kubernetes_config_map.backend-config.metadata[0].name
         }
       }
     }
@@ -43,7 +43,7 @@ resource "kubernetes_pod" "microservice-1" {
 
       env_from {
         config_map_ref {
-          name = kubernetes_config_map.backend_config.metadata[0].name
+          name = kubernetes_config_map.backend-config.metadata[0].name
         }
       }
     }
@@ -69,7 +69,7 @@ resource "kubernetes_pod" "microservice-2" {
 
       env_from {
         config_map_ref {
-          name = kubernetes_config_map.backend_config.metadata[0].name
+          name = kubernetes_config_map.backend-config.metadata[0].name
         }
       }
     }
@@ -95,7 +95,7 @@ resource "kubernetes_pod" "microservice-3" {
 
       env_from {
         config_map_ref {
-          name = kubernetes_config_map.backend_config.metadata[0].name
+          name = kubernetes_config_map.backend-config.metadata[0].name
         }
       }
     }
