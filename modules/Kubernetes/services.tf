@@ -8,7 +8,8 @@ resource "kubernetes_service" "gateway_service" {
 
   spec {
     selector = {
-      app = "gateway"  
+      app = "gateway"
+    }
 
     port {
       port        = 80       
@@ -29,7 +30,7 @@ resource "kubernetes_service" "microservice_1_service" {
 
   spec {
     selector = {
-      app = "microservice-1"  
+      app = "microservice-1"
     }
 
     port {
@@ -51,7 +52,7 @@ resource "kubernetes_service" "microservice_2_service" {
 
   spec {
     selector = {
-      app = "microservice-2"  
+      app = "microservice-2"
     }
 
     port {
@@ -73,7 +74,7 @@ resource "kubernetes_service" "microservice_3_service" {
 
   spec {
     selector = {
-      app = "microservice-3"  
+      app = "microservice-3"
     }
 
     port {
