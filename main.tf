@@ -32,3 +32,20 @@ module "artifact_registry" {
   project_id = var.project_id
   region     = var.region
 }
+
+module "website_storage" {
+  source    = "./modules/Storage"
+  project_id = var.project_id
+}
+
+module "website_loadbalancer" {
+  source     = "./modules/LoadBalancer"
+  project_id = var.project_id
+  depends_on = [module.website_storage]
+}
+
+module "cloud_function" {
+  source     = "./modules/Functions"
+  project_id = var.project_id
+  region     = var.region
+}
