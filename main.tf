@@ -48,4 +48,5 @@ module "cloud_function" {
   source     = "./modules/Functions"
   project_id = var.project_id
   region     = var.region
+  storage_bucket_name = module.storage.website_bucket_name
 }

@@ -24,6 +24,6 @@ resource "google_compute_global_forwarding_rule" "website_forwarding_rule" {
 
 resource "google_compute_backend_bucket" "website_backend" {
   name        = "website-backend-bucket"
-  bucket_name = google_storage_bucket.website_bucket.name
+  bucket_name = module.storage.website_bucket_name
   enable_cdn  = true
 }
