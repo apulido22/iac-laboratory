@@ -6,6 +6,6 @@ variable "project_id" {
 }
 
 variable "storage_bucket_name" {
-  type = string
-  description = "Nombre del bucket de almacenamiento para el sitio web"
+  description = "El nombre del bucket de almacenamiento para el sitio web."
+  type        = string
 }
